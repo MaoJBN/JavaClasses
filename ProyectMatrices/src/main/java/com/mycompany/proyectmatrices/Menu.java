@@ -59,7 +59,8 @@ public class Menu {
         return count;
     }
     
-    public String maxDishes() throws Exception{
+    public String maxDishes(){
+        String error = " No hay los suficientes platos para hacer una comparacion";
         String NameDish="";
         int count =0;
         int maxDis=0;
@@ -73,20 +74,21 @@ public class Menu {
             if (maxDis<count) {
                 maxDis =count;
                 NameDish = platos[c];
-            }else{
-            
             }
         }  
             }else{
                 throw new Exception("No tiene los suficientes platos para hacer una comparacion");
+                
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"No tiene los suficientes platos para hacer una comparacion");
+            return error;
         }
-        return maxDis + " platos de " + NameDish;
+        return "El plato mas vendido fue con "+maxDis + " platos de " + NameDish;
     }
     
     public String minDis(){
+        String error = " No hay Platos";
         String NameDish="";
         int minDis=Integer.MAX_VALUE;
         int count =0;
@@ -107,8 +109,9 @@ public class Menu {
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"No tiene los suficientes platos para hacer una comparacion");
+            return error;
         }
-        return minDis + " platos de " + NameDish;
+        return "El plato menos vendido fue con " + minDis + " platos de " + NameDish;
     }
     
     public int AvarageDish(){

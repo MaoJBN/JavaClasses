@@ -146,7 +146,6 @@ public class Ventana extends javax.swing.JFrame {
         objM.crearMenu(Integer.parseInt(JOptionPane.showInputDialog("Diga el numero de platos")));
         jButton3.setEnabled(true);
         jButton2.setEnabled(true);
-        jComboBox1.setEnabled(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -155,6 +154,7 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         objM.enterData();
+        jComboBox1.setEnabled(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -164,17 +164,17 @@ public class Ventana extends javax.swing.JFrame {
             }
           if (sl==1) {
               try {
-                 jLabel2.setText("El plato menos vendido fue con "+objM.minDis());
+                 jLabel2.setText(objM.minDis());
               } catch (Exception ex) {
-                
+                jLabel2.setText(objM.minDis());
               }
             
            }
           if (sl==2) {
             try {
-                  jLabel2.setText("El plato mas vendido fue con "+objM.maxDishes());
+                  jLabel2.setText(objM.maxDishes());
               } catch (Exception ex) {
-                
+                jLabel2.setText(objM.maxDishes());
               }
         }
           if (sl==3) {
