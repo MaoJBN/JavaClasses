@@ -32,6 +32,23 @@ public class Menu {
             }
         }
     }
+    
+    public String ShowSolds(){
+        int count;
+        String show = "";
+        for (int c = 0; c < platos.length; c++) {
+                  count=0;
+                for (int r = 0; r < 6; r++) {
+                    count=count + data[r][c];
+                }
+                show+= "El plato de "+ platos[c]+ " se vendio " + count + " durante la semana //////";
+        }
+        return show;
+    }
+    
+    
+    
+    
     public int SoldDishes(){
         int count= 0;
         for (int r = 0; r < 6; r++) {
