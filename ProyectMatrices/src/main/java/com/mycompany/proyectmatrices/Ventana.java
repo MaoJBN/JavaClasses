@@ -17,6 +17,7 @@ import javax.swing.text.html.HTML;
 public class Ventana extends javax.swing.JFrame {
 
     Menu objM = new Menu();
+    MainMenu dishes = new MainMenu();
  
             
     public Ventana() {
@@ -143,14 +144,14 @@ public class Ventana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        objM.crearMenu(Integer.parseInt(JOptionPane.showInputDialog("Diga el numero de platos")));
+        dishes.createDish();
         jButton3.setEnabled(true);
         jButton2.setEnabled(true);
         jComboBox1.setEnabled(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jLabel2.setText(objM.dishes);
+        dishes.Show();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
